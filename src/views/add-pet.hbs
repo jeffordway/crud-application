@@ -1,0 +1,47 @@
+<h1 class="title">Montclaire Pet Adoption Agency</h1>
+<div class="subtitle">Where adorable animals are waiting to find a loving family like yours.</div>
+
+<div class="form-box">
+
+    <h2 class="heading form-heading">Add a New Pet</h2>
+
+    <form action='/pets/add' method="POST">
+
+        <label for="name">Pet's Name: </label>
+        <br>
+        <input type="text" name="name" placeholder="Enter Pet's Name" />
+        <br>
+
+        <label for="animalType">Animal Type: </label>
+        <select name="animalType">
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Bird">Bird</option>
+            <option value="Cow">Cow</option>
+        </select>
+        <br>
+
+        <label for="breed">Pet's Breed: </label>
+        <input type="text" name="breed" placeholder="Enter Pet's Breed" />
+        <br>
+
+        <label for="gender">Pet's Gender: </label>
+        <input type="text" name="gender" placeholder="Enter Pet's Gender" />
+        <br>
+
+        <label for="age">Pet's Age: </label>
+        <input type="text" name="age" placeholder="Enter Pet's Age" />
+        <br>
+
+        <label for="imgUrl">Pet's Image URL: </label>
+        <input type="url" name="imgUrl" placeholder="Enter Pet's Image URL" />
+        <br>
+
+        <label for="description">Enter Item Description: </label>
+        <input type="text" name="description" placeholder="Enter Description" />
+        <br>
+
+        <button type="submit">Add Pet</button>
+
+    </form>
+</div>

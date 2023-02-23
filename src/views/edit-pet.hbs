@@ -1,0 +1,56 @@
+<h1 class="title">Montclaire Pet Adoption Agency</h1>
+<div class="subtitle">Where adorable animals are waiting to find a loving family like yours.</div>
+
+<div class="form-box">
+
+    <h2 class="heading form-heading">Edit Pet Details</h2>
+    {{#with selectedPet}}
+    <form action='/pets/edit/{{petId}}' method="POST">
+
+        <label for="name">Pet's Name: </label>
+        <br>
+        <input type="text" name="name" value="{{name}}" placeholder="Enter Pet's Name" />
+        <br>
+
+        <label for="animalType">Animal Type: </label>
+        <select name="animalType">
+            <option value="Cat">Cat</option>
+            <option value="Dog" {{#if (dog selectedPet.animalType)}}selected{{/if}}>Dog</option>
+            <option value="Bird">Bird</option>
+            <option value="Cow">Cow</option>
+        </select>
+        <br>
+
+        <label for="breed">Pet's Breed: </label>
+        <input type="text" name="breed" value="{{breed}}" placeholder="Enter Pet's Breed" />
+        <br>
+
+        <label for="gender">Pet's Gender: </label>
+        <input type="text" name="gender" value="{{gender}}" placeholder="Enter Pet's Gender" />
+        <br>
+
+        <label for="age">Pet's Age: </label>
+        <input type="text" name="age" value="{{age}}" placeholder="Enter Pet's Age" />
+        <br>
+
+        <label for="imgUrl">Pet's Image URL: </label>
+        <input type="url" name="imgUrl" value="{{imgUrl}}" placeholder="Enter Pet's Image URL" />
+        <br>
+
+        <label for="description">Enter Item Description: </label>
+        <input type="text" name="description" value="{{description}}" placeholder="Enter Description" />
+        <br>
+
+        <button type="submit">Update Pet</button>
+
+    </form>
+    {{/with}}
+</div>
+
+<script>
+    Handlebars.registerHelper('dog', function (animalType) {
+    if (animalType = 'Dog') {
+        return
+    }
+})
+</script>

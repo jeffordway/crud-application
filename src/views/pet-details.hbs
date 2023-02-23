@@ -1,0 +1,24 @@
+<h1 class="title">Montclaire Pet Adoption Agency</h1>
+<div class="subtitle">Where adorable animals are waiting to find a loving family like yours.</div>
+
+
+{{#with selectedPet}}
+<div class="details-grid main-section">
+    <div>
+        <img src="{{imgUrl}}" alt="{{name}}" class="details-img">
+    </div>
+    <div>
+        <h1 class="details-name">{{name}}</h1>
+        <h6 class="details-info">{{animalType}} | {{gender}} | {{breed}} | {{age}}</h6>
+        <p class="details-description">{{description}}</p>
+        <div class="action-btn">
+                <form action="/pets/edit/{{petId}}" method="GET">
+                    <button type="submit" class="menu-btn">Edit</button>
+                </form>
+                <form action="/pets/delete/{{petId}}" method="POST">
+                    <button type="submit" class="menu-btn">Delete</button>
+                </form>
+            </div>
+    </div>
+</div>
+{{/with}}
